@@ -8,7 +8,7 @@ namespace MyApp
         public Form1()
         {
             InitializeComponent();
-            ini = new IniManager("data/data.ini");
+            ini = new IniManager(@$"{Application.StartupPath}\data.ini");
         }
 
         private void button1_Click(object sender, System.EventArgs e)

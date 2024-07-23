@@ -4,6 +4,12 @@
 **/netcoreapp3.1/*/*.exe
 **/netcoreapp3.1/*.resources
 
+**/net472/*.dll
+**/net472/*/*.dll
+**/net472/*.exe
+**/net472/*/*.exe
+**/net472/*.resources
+
 **/runtimes/*
 **/win-x64/*
 
