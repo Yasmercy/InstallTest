@@ -1,0 +1,11 @@
+**/netcoreapp3.1/*.dll
+**/netcoreapp3.1/*/*.dll
+**/netcoreapp3.1/*.exe
+**/netcoreapp3.1/*/*.exe
+**/netcoreapp3.1/*.resources
+
+**/runtimes/*
+**/win-x64/*
+
+**/.vs/
+**/obj
