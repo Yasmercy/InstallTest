@@ -23,10 +23,12 @@ namespace Installer
                     new File($@"{sln}\Files\Bin\MyApp.pdb"),
                     new File($@"{sln}\Files\Bin\MyApp.runtimeconfig.json"),
                     new File($@"{sln}\Files\Bin\nlog.config"),
-                    new Dir(@"deps", new DirFiles($@"{sln}\Files\Bin\deps\*.*"))
+                    new Dir(@"deps", new Files($@"{sln}\Files\Bin\deps\*.*"))
                 ),
                 new IniFile(@"data.ini", $@"INSTALLDIR", IniFileAction.createLine, "user", "text", "default")
             );
+            project.Media.Clear();
+            project.AddXmlElement("Wix/Package", "MediaTemplate", "CompressionLevel=high; EmbedCab=yes");
 
             project.GUID = new Guid("6fe30b47-2577-43ad-9095-1861ba25889b");
             project.Version = new Version("1.1.0");
@@ -61,7 +63,7 @@ namespace Installer
             // project.OutDir = "<output dir path>";
 
             project.PreserveTempFiles = false;
-            project.BuildMsi("upgrade.msi");
+            project.BuildMsi();
         }
 
         static void Msi_Load(SetupEventArgs e)
