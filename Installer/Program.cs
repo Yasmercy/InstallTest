@@ -29,14 +29,12 @@ namespace Installer
             );
 
             project.GUID = new Guid("6fe30b47-2577-43ad-9095-1861ba25889b");
-            project.Version = new Version("1.0.0");
+            project.Version = new Version("1.1.0");
 
             project.MajorUpgradeStrategy = MajorUpgradeStrategy.Default;
             project.MajorUpgradeStrategy.RemoveExistingProductAfter = Step.InstallInitialize;
-            project.BeforeInstall += project_BeforeInstall;
-
-            project.ManagedUI = ManagedUI.Empty;    //no standard UI dialogs
-            project.ManagedUI = ManagedUI.Default;  //all standard UI dialogs
+            project.MajorUpgradeStrategy.PreventDowngradingVersions.OnlyDetect = false;
+            project.MajorUpgradeStrategy.PreventDowngradingVersions.MigrateFeatures = true;
 
             //custom set of standard UI dialogs
             project.ManagedUI = new ManagedUI();
@@ -56,14 +54,14 @@ namespace Installer
 
             project.Load += Msi_Load;
             project.BeforeInstall += Msi_BeforeInstall;
+            project.BeforeInstall += project_BeforeInstall;
             project.AfterInstall += Msi_AfterInstall;
 
             // project.SourceBaseDir = "<input dir path>";
             // project.OutDir = "<output dir path>";
 
-            project.PreserveTempFiles = true;
-
-            project.BuildMsi();
+            project.PreserveTempFiles = false;
+            project.BuildMsi("upgrade.msi");
         }
 
         static void Msi_Load(SetupEventArgs e)

@@ -41,7 +41,7 @@
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(130, 25);
             label1.TabIndex = 0;
-            label1.Text = "My App V1.0.0";
+            label1.Text = "My App V1.1.0";
             // 
             // textBox1
             // 

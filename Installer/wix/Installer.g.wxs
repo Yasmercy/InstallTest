@@ -6,7 +6,7 @@
     To suppress generation of this file remove `set ide=true` from the PostBuildEvent of the VS project
 </auto-generated>
 -->
-  <Package Compressed="yes" ProductCode="6fe30b47-2577-43ad-9095-1861ca25989b" Name="MyApp" Language="1033" Version="1.0.0" UpgradeCode="6fe30b47-2577-43ad-9095-1861ba25889b" Manufacturer="user" InstallerVersion="200">
+  <Package Compressed="yes" ProductCode="6fe30b47-2577-43ad-9095-1861ca35989b" Name="MyApp" Language="1033" Version="1.1.0" UpgradeCode="6fe30b47-2577-43ad-9095-1861ba25889b" Manufacturer="user" InstallerVersion="200">
     <SummaryInformation Codepage="Windows-1252" />
     <Media Id="1" Cabinet="MyApp.cab" EmbedCab="yes" />
 
@@ -62,8 +62,8 @@
     </UI>
 
     <Upgrade Id="6fe30b47-2577-43ad-9095-1861ba25889b">
-      <UpgradeVersion Minimum="0.0.0.0" Maximum="1.0.0" IncludeMinimum="yes" IncludeMaximum="no" Property="UPGRADEFOUND" />
-      <UpgradeVersion Minimum="1.0.0" IncludeMinimum="no" Property="NEWPRODUCTFOUND" />
+      <UpgradeVersion Minimum="0.0.0.0" Maximum="1.1.0" IncludeMinimum="yes" IncludeMaximum="no" Property="UPGRADEFOUND" />
+      <UpgradeVersion Minimum="1.1.0" IncludeMinimum="no" OnlyDetect="no" Property="NEWPRODUCTFOUND" MigrateFeatures="yes" />
     </Upgrade>
 
     <CustomAction Id="WixSharp_InitRuntime_Action" BinaryRef="WixSharp_InitRuntime_Action_File" DllEntry="WixSharp_InitRuntime_Action" Return="check" Execute="immediate" />
@@ -87,7 +87,7 @@
     <Property Id="WixSharp_InstallDialogs" Value="WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.WelcomeDialog&#xA;WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.LicenceDialog&#xA;WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.SetupTypeDialog&#xA;WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.FeaturesDialog&#xA;WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.InstallDirDialog&#xA;WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.ProgressDialog&#xA;WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.ExitDialog" />
     <Property Id="WixSharp_ModifyDialogs" Value="WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.MaintenanceTypeDialog&#xA;WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.FeaturesDialog&#xA;WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.ProgressDialog&#xA;WixSharp.UI, Version=2.1.2.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.ExitDialog" />
     <Property Id="WixSharp_Load_Handlers" Value="Installer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Installer.Program|Msi_Load" />
-    <Property Id="WixSharp_BeforeInstall_Handlers" Value="Installer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Installer.Program|project_BeforeInstall&#xD;&#xA;Installer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Installer.Program|Msi_BeforeInstall" />
+    <Property Id="WixSharp_BeforeInstall_Handlers" Value="Installer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Installer.Program|Msi_BeforeInstall&#xD;&#xA;Installer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Installer.Program|project_BeforeInstall" />
     <Property Id="WixSharp_AfterInstall_Handlers" Value="Installer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Installer.Program|Msi_AfterInstall" />
     <Property Id="INSTALLDIR_ABSOLUTEPATH" Value="C:\Users\user\source\repos\InstallTest\Ian\MyApp" />
 
