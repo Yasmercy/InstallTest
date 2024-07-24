@@ -9,12 +9,8 @@ namespace Installer
     {
         static void Main()
         {
-            // var project = new ManagedProject("MyProduct",
-            //                  new Dir(@"%ProgramFiles%\My Company\My Product",
-            //                      new File("Program.cs")));
-
             var root = @"C:\Users\user\source\repos\InstallTest";
-            var sln = @"C:\Users\user\source\repos\InstallTest\Installer";
+            var sln = $@"{root}\Installer";
 
             var project = new ManagedProject(
                 "MyApp",
@@ -24,9 +20,11 @@ namespace Installer
                     new File($@"{sln}\Files\Bin\MyApp.exe"),
                     new File($@"{sln}\Files\Bin\MyApp.dll"),
                     new File($@"{sln}\Files\Bin\MyApp.pdb"),
-                    new File($@"{sln}\Files\Bin\MyApp.runtimeconfig.json")
+                    new File($@"{sln}\Files\Bin\MyApp.runtimeconfig.json"),
+                    new File($@"{sln}\Files\Bin\nlog.config"),
+                    new Dir(@"deps", new DirFiles($@"{sln}\Files\Bin\deps\*.*"))
                 ),
-                new IniFile(@"config.ini", $@"INSTALLDIR", IniFileAction.createLine, "user", "text", "default")
+                new IniFile(@"data.ini", $@"INSTALLDIR", IniFileAction.createLine, "user", "text", "default")
             );
 
             project.GUID = new Guid("6fe30b47-2577-43ad-9095-1861ba25889b");

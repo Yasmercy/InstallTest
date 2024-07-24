@@ -32,8 +32,20 @@
         <File Id="MyApp.runtimeconfig.json_3940549489" Source="Files\Bin\MyApp.runtimeconfig.json" />
       </Component>
 
-      <Component Id="config.ini" Guid="6fe30b47-2577-43ad-9095-1861e149605e" KeyPath="yes">
-        <IniFile Id="config.ini" Name="config.ini" Action="createLine" Directory="INSTALLDIR" Key="text" Section="user" Value="default" />
+      <Component Id="Component.nlog.config_2759518522" Guid="6fe30b47-2577-43ad-9095-1861de77c751">
+        <File Id="nlog.config_2759518522" Source="Files\Bin\nlog.config" />
+      </Component>
+
+      <Directory Id="deps" Name="deps">
+
+        <Component Id="Component.NLog.dll_3216105990" Guid="6fe30b47-2577-43ad-9095-1861f006bf11">
+          <File Id="NLog.dll_3216105990" Source="Files\Bin\deps\NLog.dll" />
+        </Component>
+
+      </Directory>
+
+      <Component Id="data.ini" Guid="6fe30b47-2577-43ad-9095-18610be8cfd5" KeyPath="yes">
+        <IniFile Id="data.ini" Name="data.ini" Action="createLine" Directory="INSTALLDIR" Key="text" Section="user" Value="default" />
 
         <CreateFolder />
         <RemoveFolder Id="INSTALLDIR" On="uninstall" />
@@ -74,12 +86,14 @@
     <Property Id="INSTALLDIR_ABSOLUTEPATH" Value="C:\Users\user\source\repos\InstallTest\Ian\MyApp" />
 
     <Feature Id="Complete" Title="Complete" Level="1" AllowAbsent="yes">
-      <ComponentRef Id="config.ini" />
+      <ComponentRef Id="data.ini" />
       <ComponentRef Id="Component.readme.md_2755621359" />
       <ComponentRef Id="Component.MyApp.exe_2312859093" />
       <ComponentRef Id="Component.MyApp.dll_1584920881" />
       <ComponentRef Id="Component.MyApp.pdb_1857361243" />
       <ComponentRef Id="Component.MyApp.runtimeconfig.json_3940549489" />
+      <ComponentRef Id="Component.nlog.config_2759518522" />
+      <ComponentRef Id="Component.NLog.dll_3216105990" />
     </Feature>
 
     <InstallExecuteSequence>
