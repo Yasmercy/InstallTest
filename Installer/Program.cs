@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using WixSharp;
+using WixSharp.CommonTasks;
 using WixSharp.Forms;
 
 namespace Installer
@@ -28,6 +29,11 @@ namespace Installer
             );
 
             project.GUID = new Guid("6fe30b47-2577-43ad-9095-1861ba25889b");
+            project.Version = new Version("1.0.0");
+
+            project.MajorUpgradeStrategy = MajorUpgradeStrategy.Default;
+            project.MajorUpgradeStrategy.RemoveExistingProductAfter = Step.InstallInitialize;
+            project.BeforeInstall += project_BeforeInstall;
 
             project.ManagedUI = ManagedUI.Empty;    //no standard UI dialogs
             project.ManagedUI = ManagedUI.Default;  //all standard UI dialogs
@@ -52,8 +58,10 @@ namespace Installer
             project.BeforeInstall += Msi_BeforeInstall;
             project.AfterInstall += Msi_AfterInstall;
 
-            //project.SourceBaseDir = "<input dir path>";
-            //project.OutDir = "<output dir path>";
+            // project.SourceBaseDir = "<input dir path>";
+            // project.OutDir = "<output dir path>";
+
+            project.PreserveTempFiles = true;
 
             project.BuildMsi();
         }
@@ -74,6 +82,11 @@ namespace Installer
         {
             if (!e.IsUISupressed && !e.IsUninstalling)
                 MessageBox.Show(e.ToString(), "AfterExecute");
+        }
+
+        static void project_BeforeInstall(SetupEventArgs e)
+        {
+            MessageBox.Show(e.ToString(), "BeforeInstall " + AppSearch.GetProductVersionFromUpgradeCode(e.UpgradeCode));
         }
     }
 }
