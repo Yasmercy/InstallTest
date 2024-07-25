@@ -9,321 +9,38 @@
   <Package Compressed="yes" ProductCode="6fe30b47-2577-43ad-9095-1861ca35989b" Name="MyApp" Language="1033" Version="1.1.0" UpgradeCode="6fe30b47-2577-43ad-9095-1861ba25889b" Manufacturer="user" InstallerVersion="200">
     <SummaryInformation Codepage="Windows-1252" />
 
-    <Directory Id="INSTALLDIR" Name="ABSOLUTEPATH">
+    <Directory Id="INSTALLDIR" Name="INSTALLDIR">
 
-      <Component Id="Component.readme.md_2755621359" Guid="6fe30b47-2577-43ad-9095-18615a941d02">
-        <File Id="readme.md_2755621359" Source="Files\Docs\readme.md" />
+      <Component Id="Component.readme.md_148957636" Guid="6fe30b47-2577-43ad-9095-1861c8cc5fef">
+        <File Id="readme.md_148957636" Source="Files\Docs\readme.md" />
       </Component>
 
-      <Component Id="Component.MyApp.exe_2312859093" Guid="6fe30b47-2577-43ad-9095-186128ba7a57">
-        <File Id="MyApp.exe_2312859093" Source="Files\Bin\MyApp.exe" />
+      <Component Id="Component.MyApp.exe_3150101008" Guid="6fe30b47-2577-43ad-9095-1861ceacae5a">
+        <File Id="MyApp.exe_3150101008" Source="Files\Bin\MyApp.exe" />
       </Component>
 
-      <Component Id="Component.MyApp.dll_1584920881" Guid="6fe30b47-2577-43ad-9095-1861e0c364ed">
-        <File Id="MyApp.dll_1584920881" Source="Files\Bin\MyApp.dll" />
+      <Component Id="Component.MyApp.dll_776137294" Guid="6fe30b47-2577-43ad-9095-18612d45a189">
+        <File Id="MyApp.dll_776137294" Source="Files\Bin\MyApp.dll" />
       </Component>
 
-      <Component Id="Component.MyApp.pdb_1857361243" Guid="6fe30b47-2577-43ad-9095-18612d30d763">
-        <File Id="MyApp.pdb_1857361243" Source="Files\Bin\MyApp.pdb" />
+      <Component Id="Component.MyApp.pdb_1225951688" Guid="6fe30b47-2577-43ad-9095-1861a942e08c">
+        <File Id="MyApp.pdb_1225951688" Source="Files\Bin\MyApp.pdb" />
       </Component>
 
-      <Component Id="Component.MyApp.runtimeconfig.json_3940549489" Guid="6fe30b47-2577-43ad-9095-1861f2162d05">
-        <File Id="MyApp.runtimeconfig.json_3940549489" Source="Files\Bin\MyApp.runtimeconfig.json" />
+      <Component Id="Component.MyApp.runtimeconfig.json_19075213" Guid="6fe30b47-2577-43ad-9095-18614f5535a7">
+        <File Id="MyApp.runtimeconfig.json_19075213" Source="Files\Bin\MyApp.runtimeconfig.json" />
       </Component>
 
-      <Component Id="Component.nlog.config_2759518522" Guid="6fe30b47-2577-43ad-9095-1861de77c751">
-        <File Id="nlog.config_2759518522" Source="Files\Bin\nlog.config" />
+      <Component Id="Component.nlog.config_2193999010" Guid="6fe30b47-2577-43ad-9095-186164e94819">
+        <File Id="nlog.config_2193999010" Source="Files\Bin\nlog.config" />
       </Component>
 
       <Directory Id="deps" Name="deps">
 
-        <Component Id="Component.BarcodeStandard.dll_2978307120" Guid="6fe30b47-2577-43ad-9095-18618eb920b9">
-          <File Id="BarcodeStandard.dll_2978307120" Source="Files\Bin\deps\BarcodeStandard.dll" />
+        <Component Id="Component.NLog.dll_2968830808" Guid="6fe30b47-2577-43ad-9095-186161852d54">
+          <File Id="NLog.dll_2968830808" Source="Files\Bin\deps\NLog.dll" />
         </Component>
 
-        <Component Id="Component.BouncyCastle.Crypto.dll_2721671649" Guid="6fe30b47-2577-43ad-9095-18614dcba2c0">
-          <File Id="BouncyCastle.Crypto.dll_2721671649" Source="Files\Bin\deps\BouncyCastle.Crypto.dll" />
-        </Component>
-
-        <Component Id="Component.BouncyCastle.Cryptography.dll_4231376583" Guid="6fe30b47-2577-43ad-9095-1861cdc2fcec">
-          <File Id="BouncyCastle.Cryptography.dll_4231376583" Source="Files\Bin\deps\BouncyCastle.Cryptography.dll" />
-        </Component>
-
-        <Component Id="Component.ClosedXML.dll_3977336469" Guid="6fe30b47-2577-43ad-9095-1861dbff402a">
-          <File Id="ClosedXML.dll_3977336469" Source="Files\Bin\deps\ClosedXML.dll" />
-        </Component>
-
-        <Component Id="Component.Dapper.dll_2524312902" Guid="6fe30b47-2577-43ad-9095-1861e0ee4f53">
-          <File Id="Dapper.dll_2524312902" Source="Files\Bin\deps\Dapper.dll" />
-        </Component>
-
-        <Component Id="Component.DataMatrix.net.dll_1737482930" Guid="6fe30b47-2577-43ad-9095-18616c7261ce">
-          <File Id="DataMatrix.net.dll_1737482930" Source="Files\Bin\deps\DataMatrix.net.dll" />
-        </Component>
-
-        <Component Id="Component.DirectShowLib.dll_2319470435" Guid="6fe30b47-2577-43ad-9095-1861c487d088">
-          <File Id="DirectShowLib.dll_2319470435" Source="Files\Bin\deps\DirectShowLib.dll" />
-        </Component>
-
-        <Component Id="Component.DocumentFormat.OpenXml.dll_2033531228" Guid="6fe30b47-2577-43ad-9095-186155280219">
-          <File Id="DocumentFormat.OpenXml.dll_2033531228" Source="Files\Bin\deps\DocumentFormat.OpenXml.dll" />
-        </Component>
-
-        <Component Id="Component.Emgu.CV.Bitmap.dll_3025578276" Guid="6fe30b47-2577-43ad-9095-1861f61c4559">
-          <File Id="Emgu.CV.Bitmap.dll_3025578276" Source="Files\Bin\deps\Emgu.CV.Bitmap.dll" />
-        </Component>
-
-        <Component Id="Component.Emgu.CV.Platform.NetCore.dll_343266237" Guid="6fe30b47-2577-43ad-9095-1861896220e5">
-          <File Id="Emgu.CV.Platform.NetCore.dll_343266237" Source="Files\Bin\deps\Emgu.CV.Platform.NetCore.dll" />
-        </Component>
-
-        <Component Id="Component.Emgu.CV.Platform.NetStandard.dll_863333293" Guid="6fe30b47-2577-43ad-9095-1861d88db76a">
-          <File Id="Emgu.CV.Platform.NetStandard.dll_863333293" Source="Files\Bin\deps\Emgu.CV.Platform.NetStandard.dll" />
-        </Component>
-
-        <Component Id="Component.Enums.NET.dll_308710461" Guid="6fe30b47-2577-43ad-9095-1861c3b30f5c">
-          <File Id="Enums.NET.dll_308710461" Source="Files\Bin\deps\Enums.NET.dll" />
-        </Component>
-
-        <Component Id="Component.ExcelNumberFormat.dll_2979540024" Guid="6fe30b47-2577-43ad-9095-186156c8fd7b">
-          <File Id="ExcelNumberFormat.dll_2979540024" Source="Files\Bin\deps\ExcelNumberFormat.dll" />
-        </Component>
-
-        <Component Id="Component.Google.Protobuf.dll_366128972" Guid="6fe30b47-2577-43ad-9095-186165e7a7c5">
-          <File Id="Google.Protobuf.dll_366128972" Source="Files\Bin\deps\Google.Protobuf.dll" />
-        </Component>
-
-        <Component Id="Component.ICSharpCode.SharpZipLib.dll_2826223894" Guid="6fe30b47-2577-43ad-9095-186134eed651">
-          <File Id="ICSharpCode.SharpZipLib.dll_2826223894" Source="Files\Bin\deps\ICSharpCode.SharpZipLib.dll" />
-        </Component>
-
-        <Component Id="Component.Irony.dll_2850613422" Guid="6fe30b47-2577-43ad-9095-1861e77bea81">
-          <File Id="Irony.dll_2850613422" Source="Files\Bin\deps\Irony.dll" />
-        </Component>
-
-        <Component Id="Component.K4os.Compression.LZ4.dll_988327058" Guid="6fe30b47-2577-43ad-9095-18614085a08e">
-          <File Id="K4os.Compression.LZ4.dll_988327058" Source="Files\Bin\deps\K4os.Compression.LZ4.dll" />
-        </Component>
-
-        <Component Id="Component.K4os.Compression.LZ4.Streams.dll_3056298883" Guid="6fe30b47-2577-43ad-9095-18614dad9e74">
-          <File Id="K4os.Compression.LZ4.Streams.dll_3056298883" Source="Files\Bin\deps\K4os.Compression.LZ4.Streams.dll" />
-        </Component>
-
-        <Component Id="Component.K4os.Hash.xxHash.dll_1507632690" Guid="6fe30b47-2577-43ad-9095-1861498f18e8">
-          <File Id="K4os.Hash.xxHash.dll_1507632690" Source="Files\Bin\deps\K4os.Hash.xxHash.dll" />
-        </Component>
-
-        <Component Id="Component.MathNet.Numerics.dll_2793161643" Guid="6fe30b47-2577-43ad-9095-186157e2ad99">
-          <File Id="MathNet.Numerics.dll_2793161643" Source="Files\Bin\deps\MathNet.Numerics.dll" />
-        </Component>
-
-        <Component Id="Component.Microsoft.Bcl.AsyncInterfaces.dll_745374488" Guid="6fe30b47-2577-43ad-9095-186118c5c7c9">
-          <File Id="Microsoft.Bcl.AsyncInterfaces.dll_745374488" Source="Files\Bin\deps\Microsoft.Bcl.AsyncInterfaces.dll" />
-        </Component>
-
-        <Component Id="Component.Microsoft.IO.RecyclableMemoryStream.dll_1814885396" Guid="6fe30b47-2577-43ad-9095-1861ba6e59a0">
-          <File Id="Microsoft.IO.RecyclableMemoryStream.dll_1814885396" Source="Files\Bin\deps\Microsoft.IO.RecyclableMemoryStream.dll" />
-        </Component>
-
-        <Component Id="Component.Microsoft.VisualStudio.Threading.dll_2548270996" Guid="6fe30b47-2577-43ad-9095-1861ee176f98">
-          <File Id="Microsoft.VisualStudio.Threading.dll_2548270996" Source="Files\Bin\deps\Microsoft.VisualStudio.Threading.dll" />
-        </Component>
-
-        <Component Id="Component.Microsoft.VisualStudio.Validation.dll_1112270613" Guid="6fe30b47-2577-43ad-9095-1861888c5a16">
-          <File Id="Microsoft.VisualStudio.Validation.dll_1112270613" Source="Files\Bin\deps\Microsoft.VisualStudio.Validation.dll" />
-        </Component>
-
-        <Component Id="Component.Microsoft.Win32.Registry.dll_3831237952" Guid="6fe30b47-2577-43ad-9095-18617d461e3e">
-          <File Id="Microsoft.Win32.Registry.dll_3831237952" Source="Files\Bin\deps\Microsoft.Win32.Registry.dll" />
-        </Component>
-
-        <Component Id="Component.Microsoft.Win32.SystemEvents.dll_400132980" Guid="6fe30b47-2577-43ad-9095-186190d911c6">
-          <File Id="Microsoft.Win32.SystemEvents.dll_400132980" Source="Files\Bin\deps\Microsoft.Win32.SystemEvents.dll" />
-        </Component>
-
-        <Component Id="Component.MySql.Data.dll_3680340491" Guid="6fe30b47-2577-43ad-9095-1861dc5a03a0">
-          <File Id="MySql.Data.dll_3680340491" Source="Files\Bin\deps\MySql.Data.dll" />
-        </Component>
-
-        <Component Id="Component.NLog.dll_3216105990" Guid="6fe30b47-2577-43ad-9095-1861f006bf11">
-          <File Id="NLog.dll_3216105990" Source="Files\Bin\deps\NLog.dll" />
-        </Component>
-
-        <Component Id="Component.NLog.Extensions.Logging.dll_723209198" Guid="6fe30b47-2577-43ad-9095-18613aec40d2">
-          <File Id="NLog.Extensions.Logging.dll_723209198" Source="Files\Bin\deps\NLog.Extensions.Logging.dll" />
-        </Component>
-
-        <Component Id="Component.NLog.Web.AspNetCore.dll_1638145980" Guid="6fe30b47-2577-43ad-9095-186180bd72c8">
-          <File Id="NLog.Web.AspNetCore.dll_1638145980" Source="Files\Bin\deps\NLog.Web.AspNetCore.dll" />
-        </Component>
-
-        <Component Id="Component.NPOI.Core.dll_4089120666" Guid="6fe30b47-2577-43ad-9095-186142c5b188">
-          <File Id="NPOI.Core.dll_4089120666" Source="Files\Bin\deps\NPOI.Core.dll" />
-        </Component>
-
-        <Component Id="Component.NPOI.OOXML.dll_988462232" Guid="6fe30b47-2577-43ad-9095-1861153b7477">
-          <File Id="NPOI.OOXML.dll_988462232" Source="Files\Bin\deps\NPOI.OOXML.dll" />
-        </Component>
-
-        <Component Id="Component.NPOI.OpenXml4Net.dll_2829061367" Guid="6fe30b47-2577-43ad-9095-18610142cddf">
-          <File Id="NPOI.OpenXml4Net.dll_2829061367" Source="Files\Bin\deps\NPOI.OpenXml4Net.dll" />
-        </Component>
-
-        <Component Id="Component.NPOI.OpenXmlFormats.dll_3694671026" Guid="6fe30b47-2577-43ad-9095-1861125d3476">
-          <File Id="NPOI.OpenXmlFormats.dll_3694671026" Source="Files\Bin\deps\NPOI.OpenXmlFormats.dll" />
-        </Component>
-
-        <Component Id="Component.Renci.SshNet.dll_3861354939" Guid="6fe30b47-2577-43ad-9095-18613c25b6a9">
-          <File Id="Renci.SshNet.dll_3861354939" Source="Files\Bin\deps\Renci.SshNet.dll" />
-        </Component>
-
-        <Component Id="Component.SixLabors.Fonts.dll_3041126944" Guid="6fe30b47-2577-43ad-9095-1861bcdb5a6f">
-          <File Id="SixLabors.Fonts.dll_3041126944" Source="Files\Bin\deps\SixLabors.Fonts.dll" />
-        </Component>
-
-        <Component Id="Component.SixLabors.ImageSharp.dll_2697054459" Guid="6fe30b47-2577-43ad-9095-18612a4f7dac">
-          <File Id="SixLabors.ImageSharp.dll_2697054459" Source="Files\Bin\deps\SixLabors.ImageSharp.dll" />
-        </Component>
-
-        <Component Id="Component.SshNet.Security.Cryptography.dll_1142082273" Guid="6fe30b47-2577-43ad-9095-186152237068">
-          <File Id="SshNet.Security.Cryptography.dll_1142082273" Source="Files\Bin\deps\SshNet.Security.Cryptography.dll" />
-        </Component>
-
-        <Component Id="Component.System.CodeDom.dll_3645174490" Guid="6fe30b47-2577-43ad-9095-1861d6f850f0">
-          <File Id="System.CodeDom.dll_3645174490" Source="Files\Bin\deps\System.CodeDom.dll" />
-        </Component>
-
-        <Component Id="Component.System.Configuration.ConfigurationManager.dll_3270541814" Guid="6fe30b47-2577-43ad-9095-1861eb97f947">
-          <File Id="System.Configuration.ConfigurationManager.dll_3270541814" Source="Files\Bin\deps\System.Configuration.ConfigurationManager.dll" />
-        </Component>
-
-        <Component Id="Component.System.Data.SqlClient.dll_3169860268" Guid="6fe30b47-2577-43ad-9095-1861ade9a4a9">
-          <File Id="System.Data.SqlClient.dll_3169860268" Source="Files\Bin\deps\System.Data.SqlClient.dll" />
-        </Component>
-
-        <Component Id="Component.System.Drawing.Common.dll_2376119448" Guid="6fe30b47-2577-43ad-9095-1861c43cc75b">
-          <File Id="System.Drawing.Common.dll_2376119448" Source="Files\Bin\deps\System.Drawing.Common.dll" />
-        </Component>
-
-        <Component Id="Component.System.Formats.Asn1.dll_2718096103" Guid="6fe30b47-2577-43ad-9095-186132b76f0a">
-          <File Id="System.Formats.Asn1.dll_2718096103" Source="Files\Bin\deps\System.Formats.Asn1.dll" />
-        </Component>
-
-        <Component Id="Component.System.IO.Packaging.dll_4052893293" Guid="6fe30b47-2577-43ad-9095-18618f7d977c">
-          <File Id="System.IO.Packaging.dll_4052893293" Source="Files\Bin\deps\System.IO.Packaging.dll" />
-        </Component>
-
-        <Component Id="Component.System.Management.dll_2758981973" Guid="6fe30b47-2577-43ad-9095-1861eb62048a">
-          <File Id="System.Management.dll_2758981973" Source="Files\Bin\deps\System.Management.dll" />
-        </Component>
-
-        <Component Id="Component.System.Runtime.CompilerServices.Unsafe.dll_1039785088" Guid="6fe30b47-2577-43ad-9095-18610a0316d9">
-          <File Id="System.Runtime.CompilerServices.Unsafe.dll_1039785088" Source="Files\Bin\deps\System.Runtime.CompilerServices.Unsafe.dll" />
-        </Component>
-
-        <Component Id="Component.System.Security.AccessControl.dll_1155297773" Guid="6fe30b47-2577-43ad-9095-186147e2ce3e">
-          <File Id="System.Security.AccessControl.dll_1155297773" Source="Files\Bin\deps\System.Security.AccessControl.dll" />
-        </Component>
-
-        <Component Id="Component.System.Security.Cryptography.Cng.dll_4055918934" Guid="6fe30b47-2577-43ad-9095-186143d9782d">
-          <File Id="System.Security.Cryptography.Cng.dll_4055918934" Source="Files\Bin\deps\System.Security.Cryptography.Cng.dll" />
-        </Component>
-
-        <Component Id="Component.System.Security.Cryptography.Pkcs.dll_1745434060" Guid="6fe30b47-2577-43ad-9095-1861f4f6e053">
-          <File Id="System.Security.Cryptography.Pkcs.dll_1745434060" Source="Files\Bin\deps\System.Security.Cryptography.Pkcs.dll" />
-        </Component>
-
-        <Component Id="Component.System.Security.Cryptography.ProtectedData.dll_3692523272" Guid="6fe30b47-2577-43ad-9095-1861dce3bb83">
-          <File Id="System.Security.Cryptography.ProtectedData.dll_3692523272" Source="Files\Bin\deps\System.Security.Cryptography.ProtectedData.dll" />
-        </Component>
-
-        <Component Id="Component.System.Security.Cryptography.Xml.dll_1330014737" Guid="6fe30b47-2577-43ad-9095-1861c8d82e2c">
-          <File Id="System.Security.Cryptography.Xml.dll_1330014737" Source="Files\Bin\deps\System.Security.Cryptography.Xml.dll" />
-        </Component>
-
-        <Component Id="Component.System.Security.Permissions.dll_2758292958" Guid="6fe30b47-2577-43ad-9095-18616a7baafb">
-          <File Id="System.Security.Permissions.dll_2758292958" Source="Files\Bin\deps\System.Security.Permissions.dll" />
-        </Component>
-
-        <Component Id="Component.System.Security.Principal.Windows.dll_3159483573" Guid="6fe30b47-2577-43ad-9095-18619f5c36bb">
-          <File Id="System.Security.Principal.Windows.dll_3159483573" Source="Files\Bin\deps\System.Security.Principal.Windows.dll" />
-        </Component>
-
-        <Component Id="Component.System.Text.Encoding.CodePages.dll_277633511" Guid="6fe30b47-2577-43ad-9095-186151f342e5">
-          <File Id="System.Text.Encoding.CodePages.dll_277633511" Source="Files\Bin\deps\System.Text.Encoding.CodePages.dll" />
-        </Component>
-
-        <Component Id="Component.System.Text.Encodings.Web.dll_1061248903" Guid="6fe30b47-2577-43ad-9095-186118234777">
-          <File Id="System.Text.Encodings.Web.dll_1061248903" Source="Files\Bin\deps\System.Text.Encodings.Web.dll" />
-        </Component>
-
-        <Component Id="Component.System.Text.Json.dll_68009585" Guid="6fe30b47-2577-43ad-9095-186182339573">
-          <File Id="System.Text.Json.dll_68009585" Source="Files\Bin\deps\System.Text.Json.dll" />
-        </Component>
-
-        <Component Id="Component.System.Windows.Extensions.dll_2432227764" Guid="6fe30b47-2577-43ad-9095-1861665cf1a7">
-          <File Id="System.Windows.Extensions.dll_2432227764" Source="Files\Bin\deps\System.Windows.Extensions.dll" />
-        </Component>
-
-        <Component Id="Component.System.Windows.Forms.DataVisualization.dll_3516911134" Guid="6fe30b47-2577-43ad-9095-1861febf1f12">
-          <File Id="System.Windows.Forms.DataVisualization.dll_3516911134" Source="Files\Bin\deps\System.Windows.Forms.DataVisualization.dll" />
-        </Component>
-
-        <Component Id="Component.TSCLIB.dll_902943575" Guid="6fe30b47-2577-43ad-9095-1861a01ccfda">
-          <File Id="TSCLIB.dll_902943575" Source="Files\Bin\deps\TSCLIB.dll" />
-        </Component>
-
-        <Component Id="Component.Ubiety.Dns.Core.dll_3585928113" Guid="6fe30b47-2577-43ad-9095-1861e99b2c8b">
-          <File Id="Ubiety.Dns.Core.dll_3585928113" Source="Files\Bin\deps\Ubiety.Dns.Core.dll" />
-        </Component>
-
-        <Component Id="Component.XLParser.dll_3680485496" Guid="6fe30b47-2577-43ad-9095-1861d4ff300c">
-          <File Id="XLParser.dll_3680485496" Source="Files\Bin\deps\XLParser.dll" />
-        </Component>
-
-        <Component Id="Component.Zstandard.Net.dll_182731372" Guid="6fe30b47-2577-43ad-9095-1861e99b021f">
-          <File Id="Zstandard.Net.dll_182731372" Source="Files\Bin\deps\Zstandard.Net.dll" />
-        </Component>
-
-        <Directory Id="x64_" Name="x64">
-
-          <Component Id="Component.concrt140.dll_398605127" Guid="6fe30b47-2577-43ad-9095-1861964a8645">
-            <File Id="concrt140.dll_398605127" Source="Files\Bin\deps\x64\concrt140.dll" />
-          </Component>
-
-          <Component Id="Component.cvextern.dll_2032394504" Guid="6fe30b47-2577-43ad-9095-186131c49832">
-            <File Id="cvextern.dll_2032394504" Source="Files\Bin\deps\x64\cvextern.dll" />
-          </Component>
-
-          <Component Id="Component.msvcp140.dll_1168054603" Guid="6fe30b47-2577-43ad-9095-18612494ac4e">
-            <File Id="msvcp140.dll_1168054603" Source="Files\Bin\deps\x64\msvcp140.dll" />
-          </Component>
-
-          <Component Id="Component.msvcp140_1.dll_4011770565" Guid="6fe30b47-2577-43ad-9095-1861b0fa4dbe">
-            <File Id="msvcp140_1.dll_4011770565" Source="Files\Bin\deps\x64\msvcp140_1.dll" />
-          </Component>
-
-          <Component Id="Component.msvcp140_2.dll_2297938629" Guid="6fe30b47-2577-43ad-9095-1861d690a8a5">
-            <File Id="msvcp140_2.dll_2297938629" Source="Files\Bin\deps\x64\msvcp140_2.dll" />
-          </Component>
-
-          <Component Id="Component.msvcp140_codecvt_ids.dll_1054716641" Guid="6fe30b47-2577-43ad-9095-186133a8a2a8">
-            <File Id="msvcp140_codecvt_ids.dll_1054716641" Source="Files\Bin\deps\x64\msvcp140_codecvt_ids.dll" />
-          </Component>
-
-          <Component Id="Component.opencv_videoio_ffmpeg440_64.dll_1271909778" Guid="6fe30b47-2577-43ad-9095-18615de48af8">
-            <File Id="opencv_videoio_ffmpeg440_64.dll_1271909778" Source="Files\Bin\deps\x64\opencv_videoio_ffmpeg440_64.dll" />
-          </Component>
-
-          <Component Id="Component.vcruntime140.dll_4024829648" Guid="6fe30b47-2577-43ad-9095-186176742508">
-            <File Id="vcruntime140.dll_4024829648" Source="Files\Bin\deps\x64\vcruntime140.dll" />
-          </Component>
-
-          <Component Id="Component.vcruntime140_1.dll_658787273" Guid="6fe30b47-2577-43ad-9095-186182b77de0">
-            <File Id="vcruntime140_1.dll_658787273" Source="Files\Bin\deps\x64\vcruntime140_1.dll" />
-          </Component>
-
-        </Directory>
       </Directory>
 
       <Component Id="data.ini" Guid="6fe30b47-2577-43ad-9095-18610be8cfd5" KeyPath="yes">
@@ -356,7 +73,6 @@
     <CustomAction Id="Set_WixSharp_AfterInstall_Action_Props" Property="WixSharp_AfterInstall_Action" Value="WixSharp_AfterInstall_Handlers=[WixSharp_AfterInstall_Handlers];WIXSHARP_RUNTIME_DATA=[WIXSHARP_RUNTIME_DATA];INSTALLDIR=[INSTALLDIR];UILevel=[UILevel];ProductName=[ProductName];FOUNDPREVIOUSVERSION=[FOUNDPREVIOUSVERSION];UpgradeCode=[UpgradeCode];MsiLogFileLocation=[MsiLogFileLocation];INSTALLDIR=[INSTALLDIR];UILevel=[UILevel];ProductCode=[ProductCode];ADDLOCAL=[ADDLOCAL];ADDFEATURES=[ADDFEATURES]" />
     <CustomAction Id="WixSharp_AfterInstall_Action" BinaryRef="WixSharp_InitRuntime_Action_File" DllEntry="WixSharp_AfterInstall_Action" Return="check" Impersonate="no" Execute="deferred" />
     <CustomAction Id="PreventDowngrading" Error="Newer version already installed" />
-    <CustomAction Id="Set_DirAbsolutePath" Property="INSTALLDIR" Value="C:\Users\user\source\repos\InstallTest\Ian\MyApp" />
 
     <Binary Id="WixSharp_InitRuntime_Action_File" SourceFile="WixSharp.CA.dll" />
     <Binary Id="WixSharp_UIText" SourceFile="..\..\..\..\..\..\ProgramData\WixSharp\2.1.2.0\WixUI_en-US.wxl" />
@@ -371,87 +87,16 @@
     <Property Id="WixSharp_Load_Handlers" Value="Installer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Installer.Program|Msi_Load" />
     <Property Id="WixSharp_BeforeInstall_Handlers" Value="Installer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Installer.Program|Msi_BeforeInstall&#xD;&#xA;Installer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Installer.Program|project_BeforeInstall" />
     <Property Id="WixSharp_AfterInstall_Handlers" Value="Installer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Installer.Program|Msi_AfterInstall" />
-    <Property Id="INSTALLDIR_ABSOLUTEPATH" Value="C:\Users\user\source\repos\InstallTest\Ian\MyApp" />
 
     <Feature Id="Complete" Title="Complete" Level="1" AllowAbsent="yes">
       <ComponentRef Id="data.ini" />
-      <ComponentRef Id="Component.readme.md_2755621359" />
-      <ComponentRef Id="Component.MyApp.exe_2312859093" />
-      <ComponentRef Id="Component.MyApp.dll_1584920881" />
-      <ComponentRef Id="Component.MyApp.pdb_1857361243" />
-      <ComponentRef Id="Component.MyApp.runtimeconfig.json_3940549489" />
-      <ComponentRef Id="Component.nlog.config_2759518522" />
-      <ComponentRef Id="Component.BarcodeStandard.dll_2978307120" />
-      <ComponentRef Id="Component.BouncyCastle.Crypto.dll_2721671649" />
-      <ComponentRef Id="Component.BouncyCastle.Cryptography.dll_4231376583" />
-      <ComponentRef Id="Component.ClosedXML.dll_3977336469" />
-      <ComponentRef Id="Component.Dapper.dll_2524312902" />
-      <ComponentRef Id="Component.DataMatrix.net.dll_1737482930" />
-      <ComponentRef Id="Component.DirectShowLib.dll_2319470435" />
-      <ComponentRef Id="Component.DocumentFormat.OpenXml.dll_2033531228" />
-      <ComponentRef Id="Component.Emgu.CV.Bitmap.dll_3025578276" />
-      <ComponentRef Id="Component.Emgu.CV.Platform.NetCore.dll_343266237" />
-      <ComponentRef Id="Component.Emgu.CV.Platform.NetStandard.dll_863333293" />
-      <ComponentRef Id="Component.Enums.NET.dll_308710461" />
-      <ComponentRef Id="Component.ExcelNumberFormat.dll_2979540024" />
-      <ComponentRef Id="Component.Google.Protobuf.dll_366128972" />
-      <ComponentRef Id="Component.ICSharpCode.SharpZipLib.dll_2826223894" />
-      <ComponentRef Id="Component.Irony.dll_2850613422" />
-      <ComponentRef Id="Component.K4os.Compression.LZ4.dll_988327058" />
-      <ComponentRef Id="Component.K4os.Compression.LZ4.Streams.dll_3056298883" />
-      <ComponentRef Id="Component.K4os.Hash.xxHash.dll_1507632690" />
-      <ComponentRef Id="Component.MathNet.Numerics.dll_2793161643" />
-      <ComponentRef Id="Component.Microsoft.Bcl.AsyncInterfaces.dll_745374488" />
-      <ComponentRef Id="Component.Microsoft.IO.RecyclableMemoryStream.dll_1814885396" />
-      <ComponentRef Id="Component.Microsoft.VisualStudio.Threading.dll_2548270996" />
-      <ComponentRef Id="Component.Microsoft.VisualStudio.Validation.dll_1112270613" />
-      <ComponentRef Id="Component.Microsoft.Win32.Registry.dll_3831237952" />
-      <ComponentRef Id="Component.Microsoft.Win32.SystemEvents.dll_400132980" />
-      <ComponentRef Id="Component.MySql.Data.dll_3680340491" />
-      <ComponentRef Id="Component.NLog.dll_3216105990" />
-      <ComponentRef Id="Component.NLog.Extensions.Logging.dll_723209198" />
-      <ComponentRef Id="Component.NLog.Web.AspNetCore.dll_1638145980" />
-      <ComponentRef Id="Component.NPOI.Core.dll_4089120666" />
-      <ComponentRef Id="Component.NPOI.OOXML.dll_988462232" />
-      <ComponentRef Id="Component.NPOI.OpenXml4Net.dll_2829061367" />
-      <ComponentRef Id="Component.NPOI.OpenXmlFormats.dll_3694671026" />
-      <ComponentRef Id="Component.Renci.SshNet.dll_3861354939" />
-      <ComponentRef Id="Component.SixLabors.Fonts.dll_3041126944" />
-      <ComponentRef Id="Component.SixLabors.ImageSharp.dll_2697054459" />
-      <ComponentRef Id="Component.SshNet.Security.Cryptography.dll_1142082273" />
-      <ComponentRef Id="Component.System.CodeDom.dll_3645174490" />
-      <ComponentRef Id="Component.System.Configuration.ConfigurationManager.dll_3270541814" />
-      <ComponentRef Id="Component.System.Data.SqlClient.dll_3169860268" />
-      <ComponentRef Id="Component.System.Drawing.Common.dll_2376119448" />
-      <ComponentRef Id="Component.System.Formats.Asn1.dll_2718096103" />
-      <ComponentRef Id="Component.System.IO.Packaging.dll_4052893293" />
-      <ComponentRef Id="Component.System.Management.dll_2758981973" />
-      <ComponentRef Id="Component.System.Runtime.CompilerServices.Unsafe.dll_1039785088" />
-      <ComponentRef Id="Component.System.Security.AccessControl.dll_1155297773" />
-      <ComponentRef Id="Component.System.Security.Cryptography.Cng.dll_4055918934" />
-      <ComponentRef Id="Component.System.Security.Cryptography.Pkcs.dll_1745434060" />
-      <ComponentRef Id="Component.System.Security.Cryptography.ProtectedData.dll_3692523272" />
-      <ComponentRef Id="Component.System.Security.Cryptography.Xml.dll_1330014737" />
-      <ComponentRef Id="Component.System.Security.Permissions.dll_2758292958" />
-      <ComponentRef Id="Component.System.Security.Principal.Windows.dll_3159483573" />
-      <ComponentRef Id="Component.System.Text.Encoding.CodePages.dll_277633511" />
-      <ComponentRef Id="Component.System.Text.Encodings.Web.dll_1061248903" />
-      <ComponentRef Id="Component.System.Text.Json.dll_68009585" />
-      <ComponentRef Id="Component.System.Windows.Extensions.dll_2432227764" />
-      <ComponentRef Id="Component.System.Windows.Forms.DataVisualization.dll_3516911134" />
-      <ComponentRef Id="Component.TSCLIB.dll_902943575" />
-      <ComponentRef Id="Component.Ubiety.Dns.Core.dll_3585928113" />
-      <ComponentRef Id="Component.XLParser.dll_3680485496" />
-      <ComponentRef Id="Component.Zstandard.Net.dll_182731372" />
-      <ComponentRef Id="Component.concrt140.dll_398605127" />
-      <ComponentRef Id="Component.cvextern.dll_2032394504" />
-      <ComponentRef Id="Component.msvcp140.dll_1168054603" />
-      <ComponentRef Id="Component.msvcp140_1.dll_4011770565" />
-      <ComponentRef Id="Component.msvcp140_2.dll_2297938629" />
-      <ComponentRef Id="Component.msvcp140_codecvt_ids.dll_1054716641" />
-      <ComponentRef Id="Component.opencv_videoio_ffmpeg440_64.dll_1271909778" />
-      <ComponentRef Id="Component.vcruntime140.dll_4024829648" />
-      <ComponentRef Id="Component.vcruntime140_1.dll_658787273" />
+      <ComponentRef Id="Component.readme.md_148957636" />
+      <ComponentRef Id="Component.MyApp.exe_3150101008" />
+      <ComponentRef Id="Component.MyApp.dll_776137294" />
+      <ComponentRef Id="Component.MyApp.pdb_1225951688" />
+      <ComponentRef Id="Component.MyApp.runtimeconfig.json_19075213" />
+      <ComponentRef Id="Component.nlog.config_2193999010" />
+      <ComponentRef Id="Component.NLog.dll_2968830808" />
     </Feature>
 
     <InstallExecuteSequence>
@@ -465,13 +110,10 @@
       <Custom Condition="NEWPRODUCTFOUND" Action="PreventDowngrading" After="FindRelatedProducts" />
 
       <RemoveExistingProducts After="InstallInitialize" />
-
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (INSTALLDIR = ABSOLUTEPATH)" Action="Set_DirAbsolutePath" Before="AppSearch" />
     </InstallExecuteSequence>
 
     <InstallUISequence>
       <Custom Condition="NEWPRODUCTFOUND" Action="PreventDowngrading" After="FindRelatedProducts" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (INSTALLDIR = ABSOLUTEPATH)" Action="Set_DirAbsolutePath" Before="AppSearch" />
     </InstallUISequence>
 
     <MediaTemplate CompressionLevel="high" EmbedCab="yes" />

@@ -8,7 +8,7 @@ namespace Installer
 {
     internal class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             var root = @"C:\Users\user\source\repos\InstallTest";
             var sln = $@"{root}\Installer";
@@ -16,7 +16,7 @@ namespace Installer
             var project = new ManagedProject(
                 "MyApp",
                 new Dir(
-                    $@"{root}\Ian\MyApp",
+                    "INSTALLDIR",
                     new File($@"{sln}\Files\Docs\readme.md"),
                     new File($@"{sln}\Files\Bin\MyApp.exe"),
                     new File($@"{sln}\Files\Bin\MyApp.dll"),
@@ -25,7 +25,7 @@ namespace Installer
                     new File($@"{sln}\Files\Bin\nlog.config"),
                     new Dir(@"deps", new Files($@"{sln}\Files\Bin\deps\*.*"))
                 ),
-                new IniFile(@"data.ini", $@"INSTALLDIR", IniFileAction.createLine, "user", "text", "default")
+                new IniFile("data.ini", "INSTALLDIR", IniFileAction.createLine, "user", "text", "default")
             );
             project.Media.Clear();
             project.AddXmlElement("Wix/Package", "MediaTemplate", "CompressionLevel=high; EmbedCab=yes");
@@ -63,7 +63,13 @@ namespace Installer
             // project.OutDir = "<output dir path>";
 
             project.PreserveTempFiles = false;
-            project.BuildMsi();
+            var msi = project.BuildMsi();
+
+            System.IO.File.WriteAllBytes(msi, Resources.ManagedSetup);
+            string msi_args = args.Length != 0 ? string.Join(" ", args) : "/i";
+
+            var p = ProcessExtensions.Start("msiexec.exe", $@"{msi_args} ""{msi}"" INSTALLDIR=""{root}\Ian\MyApp""");
+            p.WaitForExit();
         }
 
         static void Msi_Load(SetupEventArgs e)
