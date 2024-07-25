@@ -64,12 +64,6 @@ namespace Installer
 
             project.PreserveTempFiles = false;
             var msi = project.BuildMsi();
-
-            System.IO.File.WriteAllBytes(msi, Resources.ManagedSetup);
-            string msi_args = args.Length != 0 ? string.Join(" ", args) : "/i";
-
-            var p = ProcessExtensions.Start("msiexec.exe", $@"{msi_args} ""{msi}"" INSTALLDIR=""{root}\Ian\MyApp""");
-            p.WaitForExit();
         }
 
         static void Msi_Load(SetupEventArgs e)
