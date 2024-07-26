@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using InstallerExe.Properties;
 
 public static class Launcher
 {
@@ -10,7 +11,8 @@ public static class Launcher
         var msi = Path.GetTempFileName();
         try
         {
-            File.WriteAllBytes(msi, InstallerExe.Properties.Resources.MyApp);
+            File.WriteAllBytes(msi, Resources.MyApp);
+
             string msi_args = args.Any() ? string.Join(" ", args) : "/i";
 
             var p = Process.Start("msiexec.exe", $"{msi_args} \"{msi}\"");
@@ -31,5 +33,7 @@ public static class Launcher
             }
             catch { }
         }
+
+        // return ResourceManager.GetString("String1", resourceCulture);
     }
 }
