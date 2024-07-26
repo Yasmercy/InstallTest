@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -24,7 +24,6 @@
 	
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="cd .\&#xD;&#xA;set ide=true&#xD;&#xA;&quot;$(TargetPath)&quot;" />
-    <Exec command="copy $(TargetDir)\$(SolutionName).msi $(ProjectDir)" />
   </Target>
 	
 </Project>

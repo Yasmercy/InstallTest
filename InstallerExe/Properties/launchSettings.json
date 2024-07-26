@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "InstallerExe": {
+      "commandName": "Project",
+      "commandLineArgs": "/i INSTALLDIR=\"C:\\Users\\user\\source\\repos\\InstallTest\\Ian\\MyApp\"\r\n"
+    }
+  }
+}

@@ -13,9 +13,9 @@ public static class Launcher
         {
             File.WriteAllBytes(msi, Resources.MyApp);
 
-            string msi_args = args.Any() ? string.Join(" ", args) : "/i";
-
-            var p = Process.Start("msiexec.exe", $"{msi_args} \"{msi}\"");
+            // string msi_args = args.Any() ? string.Join(" ", args) : "/i";
+            var x = $"msiexec.exe {args[0]} {msi} --% {args[1]}";
+            var p = Process.Start("msiexec.exe", $"{args[0]} {msi} {args[1]} ");
             p.WaitForExit();
             return p.ExitCode;
         }

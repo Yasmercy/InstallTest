@@ -6,15 +6,23 @@ internal class Program
 {
     static void Main()
     {
+        var installDir = @"[WindowsVolume]Users\user\source\repos\InstallTest\Ian\MyApp";
+
         var bootstrapper =
             new Bundle(
                 "MyApp",
+                // new MsiPackage(@"C:\Users\user\source\repos\InstallTest\InstallerDependencies\InstallerDependencies.msi")
+                // {
+                //     Name = "InstallerDeps",
+                //     MsiProperties = $"INSTALLDIR={installDir}",
+                //     Compressed = true
+                // },
                 new ExePackage(@"C:\Users\user\source\repos\InstallTest\InstallerExe\InstallerExe.exe")
                 {
                     Name = "Installer",
-                    InstallCommand = "/i",
-                    UninstallCommand = "/x",
-                    RepairCommand = "/fa",
+                    InstallCommand = $"/i INSTALLDIR={installDir}",
+                    UninstallCommand = $"/x INSTALLDIR={installDir}",
+                    RepairCommand = $"/fa INSTALLDIR={installDir}",
                     DetectCondition = "MyAppInstalled",
                     Compressed = true
                 }
@@ -31,7 +39,7 @@ internal class Program
             "Wix/Bundle",
             new UtilFileSearch
             {
-                Path = $@"[WindowsVolume]Users\user\source\repos\InstallTest\Ian\MyApp\MyApp.exe",
+                Path = $@"{installDir}\MyApp.exe",
                 Result = SearchResult.exists,
                 Variable = "MyAppInstalled"
             });
