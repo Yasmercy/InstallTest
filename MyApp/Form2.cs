@@ -2,11 +2,11 @@
 
 namespace MyApp
 {
-    [FrmAttribute(typeof(Form1), "One")]
-    public partial class Form1 : Form
+    [FrmAttribute(typeof(Form2), "Two")]
+    public partial class Form2 : Form
     {
         private readonly IniManager ini;
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
             ini = new IniManager(@$"{Application.StartupPath}\data.ini");
@@ -14,14 +14,14 @@ namespace MyApp
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            textBox1.Text = ini.ReadIniFile("user1", "text", "");
-            LogSet.LogTrace($"User1 Read  | {textBox1.Text}");
+            textBox1.Text = ini.ReadIniFile("user2", "text", "");
+            LogSet.LogTrace($"User2 Read  | {textBox1.Text}");
         }
 
         private void button2_Click(object sender, System.EventArgs e)
         {
-            ini.WriteIniFile("user1", "text", textBox1.Text);
-            LogSet.LogTrace($"User1 Write | {textBox1.Text}");
+            ini.WriteIniFile("user2", "text", textBox1.Text);
+            LogSet.LogTrace($"User2 Write | {textBox1.Text}");
         }
     }
 }
