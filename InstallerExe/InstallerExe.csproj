@@ -30,7 +30,7 @@
 
   <Target Name="PreBuild" AfterTargets="PreBuildEvent">
 	  <Delete Files="$(ProjectDir)$(TargetName).exe" Condition="Exists('$(ProjectDir)$(TargetName).exe')" />
-	  <Error Text="Please run Installer to build .msi" Condition="!Exists('$(SolutionDir)..\Installer\$(SolutionName).msi')" />
+	  <Error Text="Please run Installer to build .msi" Condition="!Exists('..\Installer\MyApp.msi')" />
   </Target>
 	
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

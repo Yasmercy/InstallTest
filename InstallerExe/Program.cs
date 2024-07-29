@@ -1,8 +1,7 @@
-﻿using System;
+﻿using InstallerExe.Properties;
+using System;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using InstallerExe.Properties;
 
 public static class Launcher
 {
@@ -13,6 +12,7 @@ public static class Launcher
         {
             File.WriteAllBytes(msi, Resources.MyApp);
 
+            // string msi_args = args.Any() ? string.Join(" ", args) : "/i";
             var x = $"msiexec.exe {args[0]} {msi} --% {args[1]}";
             var p = Process.Start("msiexec.exe", $"{args[0]} {msi} {args[1]} ");
             p.WaitForExit();

@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Windows.Forms;
 using WixSharp;
-using WixSharp.CommonTasks;
+using WixSharp.Custom_Dialogs;
 using WixSharp.Forms;
 
 namespace Installer
@@ -26,8 +25,9 @@ namespace Installer
                 ),
                 new IniFile("data.ini", "INSTALLDIR", IniFileAction.createLine, "user", "text", "default")
             );
-            project.Media.Clear();
-            project.AddXmlElement("Wix/Package", "MediaTemplate", "CompressionLevel=high; EmbedCab=yes");
+
+            // project.Media.Clear();
+            // project.AddXmlElement("Wix/Package", "MediaTemplate", "CompressionLevel=high; EmbedCab=yes");
 
             project.GUID = new Guid("6fe30b47-2577-43ad-9095-1861ba25889b");
             project.Version = new Version("1.1.0");
@@ -37,10 +37,11 @@ namespace Installer
             project.MajorUpgradeStrategy.PreventDowngradingVersions.OnlyDetect = false;
             project.MajorUpgradeStrategy.PreventDowngradingVersions.MigrateFeatures = true;
 
-            //custom set of standard UI dialogs
+            // project.EmbeddedUI = new EmbeddedAssembly(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
             project.ManagedUI = new ManagedUI();
 
-            project.ManagedUI.InstallDialogs.Add(Dialogs.Welcome)
+            project.ManagedUI.InstallDialogs.Add(typeof(MyWelcome))
                                             .Add(Dialogs.Licence)
                                             .Add(Dialogs.SetupType)
                                             .Add(Dialogs.Features)
@@ -53,39 +54,8 @@ namespace Installer
                                            .Add(Dialogs.Progress)
                                            .Add(Dialogs.Exit);
 
-            project.Load += Msi_Load;
-            project.BeforeInstall += Msi_BeforeInstall;
-            project.BeforeInstall += project_BeforeInstall;
-            project.AfterInstall += Msi_AfterInstall;
-
-            // project.SourceBaseDir = "<input dir path>";
-            // project.OutDir = "<output dir path>";
-
             project.PreserveTempFiles = false;
             var msi = project.BuildMsi();
-        }
-
-        static void Msi_Load(SetupEventArgs e)
-        {
-            if (!e.IsUISupressed && !e.IsUninstalling)
-                MessageBox.Show(e.ToString(), "Load");
-        }
-
-        static void Msi_BeforeInstall(SetupEventArgs e)
-        {
-            if (!e.IsUISupressed && !e.IsUninstalling)
-                MessageBox.Show(e.ToString(), "BeforeInstall");
-        }
-
-        static void Msi_AfterInstall(SetupEventArgs e)
-        {
-            if (!e.IsUISupressed && !e.IsUninstalling)
-                MessageBox.Show(e.ToString(), "AfterExecute");
-        }
-
-        static void project_BeforeInstall(SetupEventArgs e)
-        {
-            MessageBox.Show(e.ToString(), "BeforeInstall " + AppSearch.GetProductVersionFromUpgradeCode(e.UpgradeCode));
         }
     }
 }

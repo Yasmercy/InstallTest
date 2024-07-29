@@ -26,8 +26,8 @@
 	
   <Target Name="PreBuild" AfterTargets="PreBuildEvent">
 	  <Delete Files="$(ProjectDir)$(TargetName).exe" Condition="Exists('$(ProjectDir)$(TargetName).exe')" />
-	  <Error Text="Please run Installer to build .exe" Condition="!Exists('$(SolutionDir)..\InstallerExe\InstallerExe.exe')" />
-	  <Error Text="Please run InstallerDeps to build .msi" Condition="!Exists('$(SolutionDir)..\InstallerDependencies\InstallerDependencies.msi')" />
+	  <Error Text="Please run Installer to build .exe" Condition="!Exists('..\InstallerExe\InstallerExe.exe')" />
+	  <Error Text="Please run InstallerDeps to build .msi" Condition="!Exists('..\InstallerDependencies\InstallerDependencies.msi')" />
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

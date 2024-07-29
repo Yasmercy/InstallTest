@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -15,16 +15,35 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixSharp_wix4" Version="2.1.2" />
+    <PackageReference Include="WixSharp.bin" Version="1.25.3" />
+    <PackageReference Include="WixSharp.wix.bin" Version="3.14.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
 	
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="cd .\&#xD;&#xA;set ide=true&#xD;&#xA;&quot;$(TargetPath)&quot;" />
-    <Exec command="copy $(TargetDir)\$(SolutionName).msi $(ProjectDir)" />
   </Target>
 	
 </Project>
