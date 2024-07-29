@@ -11,12 +11,12 @@ internal class Program
         var bootstrapper =
             new Bundle(
                 "MyApp",
-                // new MsiPackage(@"C:\Users\user\source\repos\InstallTest\InstallerDependencies\InstallerDependencies.msi")
-                // {
-                //     Name = "InstallerDeps",
-                //     MsiProperties = $"INSTALLDIR={installDir}",
-                //     Compressed = true
-                // },
+                new MsiPackage(@"C:\Users\user\source\repos\InstallTest\InstallerDependencies\InstallerDependencies.msi")
+                {
+                    Name = "InstallerDeps",
+                    MsiProperties = $"INSTALLDIR={installDir}",
+                    Compressed = true
+                },
                 new ExePackage(@"C:\Users\user\source\repos\InstallTest\InstallerExe\InstallerExe.exe")
                 {
                     Name = "Installer",

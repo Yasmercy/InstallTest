@@ -22,8 +22,7 @@ namespace Installer
                     new File($@"{sln}\Files\Bin\MyApp.dll"),
                     new File($@"{sln}\Files\Bin\MyApp.pdb"),
                     new File($@"{sln}\Files\Bin\MyApp.runtimeconfig.json"),
-                    new File($@"{sln}\Files\Bin\nlog.config"),
-                    new Dir(@"deps", new Files($@"{sln}\Files\Bin\deps\*.*"))
+                    new File($@"{sln}\Files\Bin\nlog.config")
                 ),
                 new IniFile("data.ini", "INSTALLDIR", IniFileAction.createLine, "user", "text", "default")
             );

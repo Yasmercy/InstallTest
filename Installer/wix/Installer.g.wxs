@@ -35,14 +35,6 @@
         <File Id="nlog.config_2193999010" Source="Files\Bin\nlog.config" />
       </Component>
 
-      <Directory Id="deps" Name="deps">
-
-        <Component Id="Component.NLog.dll_2968830808" Guid="6fe30b47-2577-43ad-9095-186161852d54">
-          <File Id="NLog.dll_2968830808" Source="Files\Bin\deps\NLog.dll" />
-        </Component>
-
-      </Directory>
-
       <Component Id="data.ini" Guid="6fe30b47-2577-43ad-9095-18610be8cfd5" KeyPath="yes">
         <IniFile Id="data.ini" Name="data.ini" Action="createLine" Directory="INSTALLDIR" Key="text" Section="user" Value="default" />
 
@@ -96,7 +88,6 @@
       <ComponentRef Id="Component.MyApp.pdb_1225951688" />
       <ComponentRef Id="Component.MyApp.runtimeconfig.json_19075213" />
       <ComponentRef Id="Component.nlog.config_2193999010" />
-      <ComponentRef Id="Component.NLog.dll_2968830808" />
     </Feature>
 
     <InstallExecuteSequence>

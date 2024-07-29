@@ -6,62 +6,14 @@
     To suppress generation of this file remove `set ide=true` from the PostBuildEvent of the VS project
 </auto-generated>
 -->
-  <Package Compressed="yes" ProductCode="42a8b595-7a96-45ec-8dd0-99b41b92cff9" Name="InstallerDependencies" Language="1033" Version="1.0.0.0" UpgradeCode="42a8b595-7a96-45ec-8dd0-99b40b92cff8" Manufacturer="user" InstallerVersion="200">
+  <Package Compressed="yes" ProductCode="c08e2e0b-fad0-4cd0-8294-601a8185aa94" Name="InstallerDependencies" Language="1033" Version="1.0.0.0" UpgradeCode="c08e2e0b-fad0-4cd0-8294-601a7185aa93" Manufacturer="user" InstallerVersion="200">
     <SummaryInformation Codepage="Windows-1252" />
 
-    <Directory Id="WindowsVolumeUsers" Name="WindowsVolumeUsers">
-      <Directory Id="user" Name="user">
-        <Directory Id="source" Name="source">
-          <Directory Id="repos" Name="repos">
-            <Directory Id="InstallTest" Name="InstallTest">
-              <Directory Id="Ian" Name="Ian">
-                <Directory Id="INSTALLDIR" Name="MyApp">
+    <Directory Id="INSTALLDIR" Name="INSTALLDIR">
 
-                  <Component Id="Component.INSTALLDIR.EmptyDirectory" Guid="42a8b595-7a96-45ec-8dd0-99b42dd5beda" KeyPath="yes">
-                    <CreateFolder />
-                    <RemoveFolder Id="INSTALLDIR" On="uninstall" />
-                  </Component>
-
-                </Directory>
-
-                <Component Id="Ian" Guid="42a8b595-7a96-45ec-8dd0-99b4fd4f6033" KeyPath="yes">
-                  <CreateFolder />
-                  <RemoveFolder Id="Ian" On="uninstall" />
-                </Component>
-
-              </Directory>
-
-              <Component Id="InstallTest" Guid="42a8b595-7a96-45ec-8dd0-99b413a7318f" KeyPath="yes">
-                <CreateFolder />
-                <RemoveFolder Id="InstallTest" On="uninstall" />
-              </Component>
-
-            </Directory>
-
-            <Component Id="repos" Guid="42a8b595-7a96-45ec-8dd0-99b4c87eb9e3" KeyPath="yes">
-              <CreateFolder />
-              <RemoveFolder Id="repos" On="uninstall" />
-            </Component>
-
-          </Directory>
-
-          <Component Id="source" Guid="42a8b595-7a96-45ec-8dd0-99b40a8601fb" KeyPath="yes">
-            <CreateFolder />
-            <RemoveFolder Id="source" On="uninstall" />
-          </Component>
-
-        </Directory>
-
-        <Component Id="user" Guid="42a8b595-7a96-45ec-8dd0-99b47c179054" KeyPath="yes">
-          <CreateFolder />
-          <RemoveFolder Id="user" On="uninstall" />
-        </Component>
-
-      </Directory>
-
-      <Component Id="WindowsVolumeUsers" Guid="42a8b595-7a96-45ec-8dd0-99b4430a5be3" KeyPath="yes">
+      <Component Id="Component.INSTALLDIR.EmptyDirectory" Guid="c08e2e0b-fad0-4cd0-8294-601a93c89975" KeyPath="yes">
         <CreateFolder />
-        <RemoveFolder Id="WindowsVolumeUsers" On="uninstall" />
+        <RemoveFolder Id="INSTALLDIR" On="uninstall" />
       </Component>
 
     </Directory>
@@ -70,26 +22,389 @@
 
     <WixUI Id="WixUI_Minimal" xmlns="http://wixtoolset.org/schemas/v4/wxs/ui" />
 
-    <CustomAction Id="DownloadBin" ExeCommand="\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NLog.dll [WindowsVolume]Users\user\source\repos\InstallTest\Ian\MyApp\NLog.dll" BinaryRef="DownloadBin" Return="check" Execute="deferred" />
-    <CustomAction Id="DownloadBin.1" ExeCommand="/u \Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NLog.dll [WindowsVolume]Users\user\source\repos\InstallTest\Ian\MyApp\NLog.dll" BinaryRef="DownloadBin" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_BarcodeStandard.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_BarcodeStandard.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_BouncyCastle.Crypto.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_BouncyCastle.Crypto.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_BouncyCastle.Cryptography.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_BouncyCastle.Cryptography.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_ClosedXML.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_ClosedXML.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Dapper.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Dapper.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_DataMatrix.net.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_DataMatrix.net.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_DirectShowLib.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_DirectShowLib.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_DocumentFormat.OpenXml.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_DocumentFormat.OpenXml.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Emgu.CV.Bitmap.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Emgu.CV.Bitmap.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Emgu.CV.Platform.NetCore.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Emgu.CV.Platform.NetCore.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Emgu.CV.Platform.NetStandard.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Emgu.CV.Platform.NetStandard.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Enums.NET.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Enums.NET.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_ExcelNumberFormat.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_ExcelNumberFormat.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Google.Protobuf.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Google.Protobuf.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_ICSharpCode.SharpZipLib.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_ICSharpCode.SharpZipLib.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Irony.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Irony.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_K4os.Compression.LZ4.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_K4os.Compression.LZ4.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_K4os.Compression.LZ4.Streams.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_K4os.Compression.LZ4.Streams.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_K4os.Hash.xxHash.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_K4os.Hash.xxHash.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_MathNet.Numerics.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_MathNet.Numerics.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.Bcl.AsyncInterfaces.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.Bcl.AsyncInterfaces.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.IO.RecyclableMemoryStream.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.IO.RecyclableMemoryStream.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.VisualStudio.Threading.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.VisualStudio.Threading.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.VisualStudio.Validation.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.VisualStudio.Validation.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.Win32.Registry.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.Win32.Registry.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.Win32.SystemEvents.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Microsoft.Win32.SystemEvents.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_MySql.Data.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_MySql.Data.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NLog.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NLog.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NLog.Extensions.Logging.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NLog.Extensions.Logging.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NLog.Web.AspNetCore.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NLog.Web.AspNetCore.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NPOI.Core.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NPOI.Core.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NPOI.OOXML.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NPOI.OOXML.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NPOI.OpenXml4Net.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NPOI.OpenXml4Net.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NPOI.OpenXmlFormats.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_NPOI.OpenXmlFormats.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Renci.SshNet.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Renci.SshNet.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_SixLabors.Fonts.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_SixLabors.Fonts.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_SixLabors.ImageSharp.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_SixLabors.ImageSharp.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_SshNet.Security.Cryptography.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_SshNet.Security.Cryptography.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.CodeDom.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.CodeDom.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Configuration.ConfigurationManager.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Configuration.ConfigurationManager.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Data.SqlClient.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Data.SqlClient.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Drawing.Common.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Drawing.Common.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Formats.Asn1.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Formats.Asn1.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.IO.Packaging.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.IO.Packaging.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Management.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Management.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Runtime.CompilerServices.Unsafe.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Runtime.CompilerServices.Unsafe.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.AccessControl.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.AccessControl.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Cryptography.Cng.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Cryptography.Cng.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Cryptography.Pkcs.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Cryptography.Pkcs.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Cryptography.ProtectedData.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Cryptography.ProtectedData.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Cryptography.Xml.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Cryptography.Xml.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Permissions.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Permissions.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Principal.Windows.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Security.Principal.Windows.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Text.Encoding.CodePages.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Text.Encoding.CodePages.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Text.Encodings.Web.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Text.Encodings.Web.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Text.Json.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Text.Json.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Windows.Extensions.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Windows.Extensions.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Windows.Forms.DataVisualization.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_System.Windows.Forms.DataVisualization.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_TSCLIB.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_TSCLIB.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Ubiety.Dns.Core.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Ubiety.Dns.Core.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_XLParser.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_XLParser.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Zstandard.Net.dll.Install" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
+    <CustomAction Id="MyCustomAction.Download_Zstandard.Net.dll.Uninstall" BinaryRef="Download_File" DllEntry="Download" Return="check" Execute="deferred" />
 
-    <Binary Id="DownloadBin" SourceFile="actions\download.exe" />
+    <Binary Id="Download_File" SourceFile="%this%.CA.dll" />
 
     <UIRef Id="WixUI_ErrorProgressText" />
 
+    <Property Id="MyCustomAction.Download_BarcodeStandard.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\BarcodeStandard.dll;Dest=BarcodeStandard.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_BarcodeStandard.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\BarcodeStandard.dll;Dest=BarcodeStandard.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_BouncyCastle.Crypto.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\BouncyCastle.Crypto.dll;Dest=BouncyCastle.Crypto.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_BouncyCastle.Crypto.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\BouncyCastle.Crypto.dll;Dest=BouncyCastle.Crypto.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_BouncyCastle.Cryptography.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\BouncyCastle.Cryptography.dll;Dest=BouncyCastle.Cryptography.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_BouncyCastle.Cryptography.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\BouncyCastle.Cryptography.dll;Dest=BouncyCastle.Cryptography.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_ClosedXML.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\ClosedXML.dll;Dest=ClosedXML.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_ClosedXML.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\ClosedXML.dll;Dest=ClosedXML.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Dapper.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Dapper.dll;Dest=Dapper.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Dapper.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Dapper.dll;Dest=Dapper.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_DataMatrix.net.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\DataMatrix.net.dll;Dest=DataMatrix.net.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_DataMatrix.net.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\DataMatrix.net.dll;Dest=DataMatrix.net.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_DirectShowLib.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\DirectShowLib.dll;Dest=DirectShowLib.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_DirectShowLib.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\DirectShowLib.dll;Dest=DirectShowLib.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_DocumentFormat.OpenXml.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\DocumentFormat.OpenXml.dll;Dest=DocumentFormat.OpenXml.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_DocumentFormat.OpenXml.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\DocumentFormat.OpenXml.dll;Dest=DocumentFormat.OpenXml.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Emgu.CV.Bitmap.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Emgu.CV.Bitmap.dll;Dest=Emgu.CV.Bitmap.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Emgu.CV.Bitmap.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Emgu.CV.Bitmap.dll;Dest=Emgu.CV.Bitmap.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Emgu.CV.Platform.NetCore.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Emgu.CV.Platform.NetCore.dll;Dest=Emgu.CV.Platform.NetCore.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Emgu.CV.Platform.NetCore.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Emgu.CV.Platform.NetCore.dll;Dest=Emgu.CV.Platform.NetCore.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Emgu.CV.Platform.NetStandard.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Emgu.CV.Platform.NetStandard.dll;Dest=Emgu.CV.Platform.NetStandard.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Emgu.CV.Platform.NetStandard.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Emgu.CV.Platform.NetStandard.dll;Dest=Emgu.CV.Platform.NetStandard.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Enums.NET.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Enums.NET.dll;Dest=Enums.NET.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Enums.NET.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Enums.NET.dll;Dest=Enums.NET.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_ExcelNumberFormat.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\ExcelNumberFormat.dll;Dest=ExcelNumberFormat.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_ExcelNumberFormat.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\ExcelNumberFormat.dll;Dest=ExcelNumberFormat.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Google.Protobuf.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Google.Protobuf.dll;Dest=Google.Protobuf.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Google.Protobuf.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Google.Protobuf.dll;Dest=Google.Protobuf.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_ICSharpCode.SharpZipLib.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\ICSharpCode.SharpZipLib.dll;Dest=ICSharpCode.SharpZipLib.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_ICSharpCode.SharpZipLib.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\ICSharpCode.SharpZipLib.dll;Dest=ICSharpCode.SharpZipLib.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Irony.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Irony.dll;Dest=Irony.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Irony.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Irony.dll;Dest=Irony.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_K4os.Compression.LZ4.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\K4os.Compression.LZ4.dll;Dest=K4os.Compression.LZ4.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_K4os.Compression.LZ4.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\K4os.Compression.LZ4.dll;Dest=K4os.Compression.LZ4.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_K4os.Compression.LZ4.Streams.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\K4os.Compression.LZ4.Streams.dll;Dest=K4os.Compression.LZ4.Streams.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_K4os.Compression.LZ4.Streams.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\K4os.Compression.LZ4.Streams.dll;Dest=K4os.Compression.LZ4.Streams.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_K4os.Hash.xxHash.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\K4os.Hash.xxHash.dll;Dest=K4os.Hash.xxHash.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_K4os.Hash.xxHash.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\K4os.Hash.xxHash.dll;Dest=K4os.Hash.xxHash.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_MathNet.Numerics.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\MathNet.Numerics.dll;Dest=MathNet.Numerics.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_MathNet.Numerics.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\MathNet.Numerics.dll;Dest=MathNet.Numerics.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Microsoft.Bcl.AsyncInterfaces.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.Bcl.AsyncInterfaces.dll;Dest=Microsoft.Bcl.AsyncInterfaces.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Microsoft.Bcl.AsyncInterfaces.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.Bcl.AsyncInterfaces.dll;Dest=Microsoft.Bcl.AsyncInterfaces.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Microsoft.IO.RecyclableMemoryStream.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.IO.RecyclableMemoryStream.dll;Dest=Microsoft.IO.RecyclableMemoryStream.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Microsoft.IO.RecyclableMemoryStream.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.IO.RecyclableMemoryStream.dll;Dest=Microsoft.IO.RecyclableMemoryStream.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Microsoft.VisualStudio.Threading.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.VisualStudio.Threading.dll;Dest=Microsoft.VisualStudio.Threading.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Microsoft.VisualStudio.Threading.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.VisualStudio.Threading.dll;Dest=Microsoft.VisualStudio.Threading.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Microsoft.VisualStudio.Validation.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.VisualStudio.Validation.dll;Dest=Microsoft.VisualStudio.Validation.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Microsoft.VisualStudio.Validation.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.VisualStudio.Validation.dll;Dest=Microsoft.VisualStudio.Validation.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Microsoft.Win32.Registry.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.Win32.Registry.dll;Dest=Microsoft.Win32.Registry.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Microsoft.Win32.Registry.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.Win32.Registry.dll;Dest=Microsoft.Win32.Registry.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Microsoft.Win32.SystemEvents.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.Win32.SystemEvents.dll;Dest=Microsoft.Win32.SystemEvents.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Microsoft.Win32.SystemEvents.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Microsoft.Win32.SystemEvents.dll;Dest=Microsoft.Win32.SystemEvents.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_MySql.Data.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\MySql.Data.dll;Dest=MySql.Data.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_MySql.Data.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\MySql.Data.dll;Dest=MySql.Data.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_NLog.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NLog.dll;Dest=NLog.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_NLog.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NLog.dll;Dest=NLog.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_NLog.Extensions.Logging.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NLog.Extensions.Logging.dll;Dest=NLog.Extensions.Logging.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_NLog.Extensions.Logging.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NLog.Extensions.Logging.dll;Dest=NLog.Extensions.Logging.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_NLog.Web.AspNetCore.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NLog.Web.AspNetCore.dll;Dest=NLog.Web.AspNetCore.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_NLog.Web.AspNetCore.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NLog.Web.AspNetCore.dll;Dest=NLog.Web.AspNetCore.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_NPOI.Core.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NPOI.Core.dll;Dest=NPOI.Core.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_NPOI.Core.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NPOI.Core.dll;Dest=NPOI.Core.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_NPOI.OOXML.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NPOI.OOXML.dll;Dest=NPOI.OOXML.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_NPOI.OOXML.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NPOI.OOXML.dll;Dest=NPOI.OOXML.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_NPOI.OpenXml4Net.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NPOI.OpenXml4Net.dll;Dest=NPOI.OpenXml4Net.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_NPOI.OpenXml4Net.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NPOI.OpenXml4Net.dll;Dest=NPOI.OpenXml4Net.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_NPOI.OpenXmlFormats.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NPOI.OpenXmlFormats.dll;Dest=NPOI.OpenXmlFormats.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_NPOI.OpenXmlFormats.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NPOI.OpenXmlFormats.dll;Dest=NPOI.OpenXmlFormats.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Renci.SshNet.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Renci.SshNet.dll;Dest=Renci.SshNet.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Renci.SshNet.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Renci.SshNet.dll;Dest=Renci.SshNet.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_SixLabors.Fonts.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\SixLabors.Fonts.dll;Dest=SixLabors.Fonts.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_SixLabors.Fonts.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\SixLabors.Fonts.dll;Dest=SixLabors.Fonts.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_SixLabors.ImageSharp.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\SixLabors.ImageSharp.dll;Dest=SixLabors.ImageSharp.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_SixLabors.ImageSharp.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\SixLabors.ImageSharp.dll;Dest=SixLabors.ImageSharp.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_SshNet.Security.Cryptography.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\SshNet.Security.Cryptography.dll;Dest=SshNet.Security.Cryptography.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_SshNet.Security.Cryptography.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\SshNet.Security.Cryptography.dll;Dest=SshNet.Security.Cryptography.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.CodeDom.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.CodeDom.dll;Dest=System.CodeDom.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.CodeDom.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.CodeDom.dll;Dest=System.CodeDom.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Configuration.ConfigurationManager.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Configuration.ConfigurationManager.dll;Dest=System.Configuration.ConfigurationManager.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Configuration.ConfigurationManager.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Configuration.ConfigurationManager.dll;Dest=System.Configuration.ConfigurationManager.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Data.SqlClient.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Data.SqlClient.dll;Dest=System.Data.SqlClient.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Data.SqlClient.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Data.SqlClient.dll;Dest=System.Data.SqlClient.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Drawing.Common.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Drawing.Common.dll;Dest=System.Drawing.Common.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Drawing.Common.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Drawing.Common.dll;Dest=System.Drawing.Common.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Formats.Asn1.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Formats.Asn1.dll;Dest=System.Formats.Asn1.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Formats.Asn1.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Formats.Asn1.dll;Dest=System.Formats.Asn1.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.IO.Packaging.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.IO.Packaging.dll;Dest=System.IO.Packaging.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.IO.Packaging.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.IO.Packaging.dll;Dest=System.IO.Packaging.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Management.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Management.dll;Dest=System.Management.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Management.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Management.dll;Dest=System.Management.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Runtime.CompilerServices.Unsafe.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Runtime.CompilerServices.Unsafe.dll;Dest=System.Runtime.CompilerServices.Unsafe.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Runtime.CompilerServices.Unsafe.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Runtime.CompilerServices.Unsafe.dll;Dest=System.Runtime.CompilerServices.Unsafe.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Security.AccessControl.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.AccessControl.dll;Dest=System.Security.AccessControl.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Security.AccessControl.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.AccessControl.dll;Dest=System.Security.AccessControl.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Security.Cryptography.Cng.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Cryptography.Cng.dll;Dest=System.Security.Cryptography.Cng.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Security.Cryptography.Cng.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Cryptography.Cng.dll;Dest=System.Security.Cryptography.Cng.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Security.Cryptography.Pkcs.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Cryptography.Pkcs.dll;Dest=System.Security.Cryptography.Pkcs.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Security.Cryptography.Pkcs.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Cryptography.Pkcs.dll;Dest=System.Security.Cryptography.Pkcs.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Security.Cryptography.ProtectedData.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Cryptography.ProtectedData.dll;Dest=System.Security.Cryptography.ProtectedData.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Security.Cryptography.ProtectedData.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Cryptography.ProtectedData.dll;Dest=System.Security.Cryptography.ProtectedData.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Security.Cryptography.Xml.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Cryptography.Xml.dll;Dest=System.Security.Cryptography.Xml.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Security.Cryptography.Xml.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Cryptography.Xml.dll;Dest=System.Security.Cryptography.Xml.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Security.Permissions.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Permissions.dll;Dest=System.Security.Permissions.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Security.Permissions.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Permissions.dll;Dest=System.Security.Permissions.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Security.Principal.Windows.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Principal.Windows.dll;Dest=System.Security.Principal.Windows.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Security.Principal.Windows.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Security.Principal.Windows.dll;Dest=System.Security.Principal.Windows.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Text.Encoding.CodePages.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Text.Encoding.CodePages.dll;Dest=System.Text.Encoding.CodePages.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Text.Encoding.CodePages.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Text.Encoding.CodePages.dll;Dest=System.Text.Encoding.CodePages.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Text.Encodings.Web.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Text.Encodings.Web.dll;Dest=System.Text.Encodings.Web.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Text.Encodings.Web.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Text.Encodings.Web.dll;Dest=System.Text.Encodings.Web.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Text.Json.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Text.Json.dll;Dest=System.Text.Json.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Text.Json.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Text.Json.dll;Dest=System.Text.Json.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Windows.Extensions.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Windows.Extensions.dll;Dest=System.Windows.Extensions.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Windows.Extensions.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Windows.Extensions.dll;Dest=System.Windows.Extensions.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_System.Windows.Forms.DataVisualization.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Windows.Forms.DataVisualization.dll;Dest=System.Windows.Forms.DataVisualization.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_System.Windows.Forms.DataVisualization.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\System.Windows.Forms.DataVisualization.dll;Dest=System.Windows.Forms.DataVisualization.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_TSCLIB.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\TSCLIB.dll;Dest=TSCLIB.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_TSCLIB.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\TSCLIB.dll;Dest=TSCLIB.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Ubiety.Dns.Core.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Ubiety.Dns.Core.dll;Dest=Ubiety.Dns.Core.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Ubiety.Dns.Core.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Ubiety.Dns.Core.dll;Dest=Ubiety.Dns.Core.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_XLParser.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\XLParser.dll;Dest=XLParser.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_XLParser.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\XLParser.dll;Dest=XLParser.dll;Opt=/u" />
+    <Property Id="MyCustomAction.Download_Zstandard.Net.dll.Install" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Zstandard.Net.dll;Dest=Zstandard.Net.dll;Opt=/i" />
+    <Property Id="MyCustomAction.Download_Zstandard.Net.dll.Uninstall" Value="Src=\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\Zstandard.Net.dll;Dest=Zstandard.Net.dll;Opt=/u" />
+
     <Feature Id="Complete" Title="Complete" Level="1" AllowAbsent="yes">
       <ComponentRef Id="Component.INSTALLDIR.EmptyDirectory" />
-      <ComponentRef Id="Ian" />
-      <ComponentRef Id="InstallTest" />
-      <ComponentRef Id="repos" />
-      <ComponentRef Id="source" />
-      <ComponentRef Id="user" />
-      <ComponentRef Id="WindowsVolumeUsers" />
     </Feature>
 
     <InstallExecuteSequence>
-      <Custom Condition=" (NOT Installed) " Action="DownloadBin" After="InstallFiles" />
-      <Custom Condition=" (Installed) " Action="DownloadBin.1" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_BarcodeStandard.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_BarcodeStandard.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_BouncyCastle.Crypto.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_BouncyCastle.Crypto.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_BouncyCastle.Cryptography.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_BouncyCastle.Cryptography.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_ClosedXML.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_ClosedXML.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Dapper.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Dapper.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_DataMatrix.net.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_DataMatrix.net.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_DirectShowLib.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_DirectShowLib.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_DocumentFormat.OpenXml.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_DocumentFormat.OpenXml.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Emgu.CV.Bitmap.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Emgu.CV.Bitmap.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Emgu.CV.Platform.NetCore.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Emgu.CV.Platform.NetCore.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Emgu.CV.Platform.NetStandard.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Emgu.CV.Platform.NetStandard.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Enums.NET.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Enums.NET.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_ExcelNumberFormat.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_ExcelNumberFormat.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Google.Protobuf.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Google.Protobuf.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_ICSharpCode.SharpZipLib.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_ICSharpCode.SharpZipLib.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Irony.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Irony.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_K4os.Compression.LZ4.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_K4os.Compression.LZ4.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_K4os.Compression.LZ4.Streams.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_K4os.Compression.LZ4.Streams.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_K4os.Hash.xxHash.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_K4os.Hash.xxHash.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_MathNet.Numerics.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_MathNet.Numerics.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Microsoft.Bcl.AsyncInterfaces.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Microsoft.Bcl.AsyncInterfaces.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Microsoft.IO.RecyclableMemoryStream.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Microsoft.IO.RecyclableMemoryStream.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Microsoft.VisualStudio.Threading.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Microsoft.VisualStudio.Threading.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Microsoft.VisualStudio.Validation.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Microsoft.VisualStudio.Validation.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Microsoft.Win32.Registry.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Microsoft.Win32.Registry.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Microsoft.Win32.SystemEvents.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Microsoft.Win32.SystemEvents.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_MySql.Data.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_MySql.Data.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_NLog.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_NLog.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_NLog.Extensions.Logging.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_NLog.Extensions.Logging.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_NLog.Web.AspNetCore.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_NLog.Web.AspNetCore.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_NPOI.Core.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_NPOI.Core.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_NPOI.OOXML.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_NPOI.OOXML.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_NPOI.OpenXml4Net.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_NPOI.OpenXml4Net.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_NPOI.OpenXmlFormats.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_NPOI.OpenXmlFormats.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Renci.SshNet.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Renci.SshNet.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_SixLabors.Fonts.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_SixLabors.Fonts.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_SixLabors.ImageSharp.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_SixLabors.ImageSharp.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_SshNet.Security.Cryptography.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_SshNet.Security.Cryptography.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.CodeDom.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.CodeDom.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Configuration.ConfigurationManager.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Configuration.ConfigurationManager.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Data.SqlClient.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Data.SqlClient.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Drawing.Common.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Drawing.Common.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Formats.Asn1.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Formats.Asn1.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.IO.Packaging.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.IO.Packaging.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Management.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Management.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Runtime.CompilerServices.Unsafe.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Runtime.CompilerServices.Unsafe.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Security.AccessControl.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Security.AccessControl.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Security.Cryptography.Cng.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Security.Cryptography.Cng.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Security.Cryptography.Pkcs.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Security.Cryptography.Pkcs.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Security.Cryptography.ProtectedData.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Security.Cryptography.ProtectedData.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Security.Cryptography.Xml.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Security.Cryptography.Xml.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Security.Permissions.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Security.Permissions.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Security.Principal.Windows.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Security.Principal.Windows.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Text.Encoding.CodePages.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Text.Encoding.CodePages.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Text.Encodings.Web.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Text.Encodings.Web.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Text.Json.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Text.Json.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Windows.Extensions.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Windows.Extensions.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_System.Windows.Forms.DataVisualization.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_System.Windows.Forms.DataVisualization.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_TSCLIB.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_TSCLIB.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Ubiety.Dns.Core.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Ubiety.Dns.Core.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_XLParser.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_XLParser.dll.Uninstall" After="InstallFiles" />
+      <Custom Condition=" (NOT Installed) " Action="MyCustomAction.Download_Zstandard.Net.dll.Install" After="InstallFiles" />
+      <Custom Condition=" (Installed) " Action="MyCustomAction.Download_Zstandard.Net.dll.Uninstall" After="InstallFiles" />
     </InstallExecuteSequence>
   </Package>
 </Wix>
