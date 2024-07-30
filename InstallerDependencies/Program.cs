@@ -7,9 +7,7 @@ namespace InstallerDependencies
     {
         static void Main(string[] args)
         {
-            var root = @"\Users\user\source\repos\InstallTest";
-            var sln = $@"{root}\Installer";
-            var srcDir = $@"{sln}\Files\Bin\deps\";
+            var srcDir = $@"\\192.168.10.240\設備部門\設備軟體\gitServer\deps\";
 
             var project = new Project(
                 "InstallerDependencies",
@@ -25,13 +23,13 @@ namespace InstallerDependencies
             {
                 var file = str.Substring(srcDir.Length);
                 project.AddAction(
-                    new BinaryFileAction("DownloadBin", $@"{str} [INSTALLDIR]\{file}", Return.check, When.After, Step.InstallFiles, Condition.NOT_Installed)
+                    new BinaryFileAction("DownloadBin", $@"/i [INSTALLDIR] {file}", Return.check, When.After, Step.InstallFiles, Condition.NOT_Installed)
                     {
                         Execute = Execute.deferred
                     }
                 );
                 project.AddAction(
-                    new BinaryFileAction("DownloadBin", $@"/u {str} [INSTALLDIR]\{file}", Return.check, When.After, Step.InstallFiles, Condition.Installed)
+                    new BinaryFileAction("DownloadBin", $@"/u [INSTALLDIR] {file}", Return.check, When.After, Step.InstallFiles, Condition.Installed)
                     {
                         Execute = Execute.deferred
                     }

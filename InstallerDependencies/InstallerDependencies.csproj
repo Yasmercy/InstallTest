@@ -13,8 +13,17 @@
     <None Remove="*.wixpdb" />
     <None Remove="*.wixobj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="actions\download.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="actions\download.cs" />
+  </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="WixSharp.wix.bin" Version="3.14.1" />
     <PackageReference Include="WixSharp_wix4" Version="2.1.2" />
   </ItemGroup>
 

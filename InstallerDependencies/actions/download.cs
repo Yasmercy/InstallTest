@@ -1,25 +1,40 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
+using System.Linq;
 
 class Script
 {
     static void main(string[] args)
     {
-        if (args.Length < 2)
+        var opts = args[0];
+        var destDir = args[1];
+        // var srcDir = @"ADD DIRECTORY TO \\Public\...\deps\ HERE"
+
+		// opts destFolder [*.dll]
+		if (args.Length < 3)
             return;
 
         if (args[0] == "/u")
         {
-            if (args.Length > 2 && File.Exists(args[2]))
+            foreach (var file in args.Skip(2))
             {
-                File.Delete(args[2]);
+                if (File.Exists($"{destDir}{file}"))
+                {
+                    File.Delete($"{destDir}{file}");
+                }
             }
         }
-        else 
+        else if (args[0] == "/i")
         {
-            if (!File.Exists(args[1]))
+            Process.Start("net", $"use {srcDir}");
+            foreach (var file in args.Skip(2))
             {
-                File.Copy(args[0], args[1]);
+                if (File.Exists($"{srcDir}{file}") && !File.Exists($"{destDir}{file}"))
+                {
+                    File.Copy($"{srcDir}{file}", $"{destDir}{file}");
+                }
             }
+            Process.Start("net", $"use {srcDir} /delete");
         }
     }
 }

@@ -12,6 +12,9 @@ namespace Installer
             var root = @"C:\Users\user\source\repos\InstallTest";
             var sln = $@"{root}\Installer";
 
+            var feature1 = new Feature("Featuer1");
+            var feature2 = new Feature("Featuer2");
+
             var project = new ManagedProject(
                 "MyApp",
                 new Dir(
@@ -23,8 +26,18 @@ namespace Installer
                     new File($@"{sln}\Files\Bin\MyApp.runtimeconfig.json"),
                     new File($@"{sln}\Files\Bin\nlog.config")
                 ),
-                new IniFile("data.ini", "INSTALLDIR", IniFileAction.createLine, "user", "text", "default")
+                new Dir(@"%Desktop%",
+                    new ExeFileShortcut("MyApp", System.IO.Path.Combine("[INSTALLDIR]", "MyApp.exe"), arguments: "") 
+                    { WorkingDirectory = "[INSTALLDIR]" }
+                ),
+                new Dir(@"%ProgramMenu%",
+                    new ExeFileShortcut("MyApp", System.IO.Path.Combine("[INSTALLDIR]", "MyApp.exe"), arguments: "") 
+                    { WorkingDirectory = "[INSTALLDIR]" }
+                ),
+                new IniFile(feature1, "data.ini", "INSTALLDIR", IniFileAction.createLine, "Form1", "Include", "true"),
+                new IniFile(feature2, "data.ini", "INSTALLDIR", IniFileAction.createLine, "Form2", "Include", "true")
             );
+
 
             // project.Media.Clear();
             // project.AddXmlElement("Wix/Package", "MediaTemplate", "CompressionLevel=high; EmbedCab=yes");

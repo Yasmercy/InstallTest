@@ -6,12 +6,12 @@
     To suppress generation of this file remove `set ide=true` from the PostBuildEvent of the VS project
 </auto-generated>
 -->
-  <Package Compressed="yes" ProductCode="65f93cf5-8488-40cb-bf12-9d0fc997ded0" Name="InstallerDependencies" Language="1033" Version="1.0.0.0" UpgradeCode="65f93cf5-8488-40cb-bf12-9d0fb997decf" Manufacturer="user" InstallerVersion="200">
+  <Package Compressed="yes" ProductCode="f36ca879-4ef0-4078-b431-e44559400dfa" Name="InstallerDependencies" Language="1033" Version="1.0.0.0" UpgradeCode="f36ca879-4ef0-4078-b431-e44549400df9" Manufacturer="user" InstallerVersion="200">
     <SummaryInformation Codepage="Windows-1252" />
 
     <Directory Id="INSTALLDIR" Name="INSTALLDIR">
 
-      <Component Id="Component.INSTALLDIR.EmptyDirectory" Guid="65f93cf5-8488-40cb-bf12-9d0fdbdacdb1" KeyPath="yes">
+      <Component Id="Component.INSTALLDIR.EmptyDirectory" Guid="f36ca879-4ef0-4078-b431-e4456b83fcdb" KeyPath="yes">
         <CreateFolder />
         <RemoveFolder Id="INSTALLDIR" On="uninstall" />
       </Component>
@@ -22,8 +22,8 @@
 
     <WixUI Id="WixUI_Minimal" xmlns="http://wixtoolset.org/schemas/v4/wxs/ui" />
 
-    <CustomAction Id="DownloadBin" ExeCommand="\Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NLog.dll [INSTALLDIR]\NLog.dll" BinaryRef="DownloadBin" Return="check" Execute="deferred" />
-    <CustomAction Id="DownloadBin.1" ExeCommand="/u \Users\user\source\repos\InstallTest\Installer\Files\Bin\deps\NLog.dll [INSTALLDIR]\NLog.dll" BinaryRef="DownloadBin" Return="check" Execute="deferred" />
+    <CustomAction Id="DownloadBin" ExeCommand="/i [INSTALLDIR] NLog.dll" BinaryRef="DownloadBin" Return="check" Execute="deferred" />
+    <CustomAction Id="DownloadBin.1" ExeCommand="/u [INSTALLDIR] NLog.dll" BinaryRef="DownloadBin" Return="check" Execute="deferred" />
 
     <Binary Id="DownloadBin" SourceFile="actions\download.exe" />
 

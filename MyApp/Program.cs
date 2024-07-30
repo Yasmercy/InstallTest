@@ -6,6 +6,12 @@ using System.Windows.Forms;
 
 namespace MyApp
 {
+    public static class Global
+    {
+        public static readonly IniManager IniManager = new IniManager($"{Application.StartupPath}/data.ini");
+
+    }
+
     internal static class Program
     {
         /// <summary>

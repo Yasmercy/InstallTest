@@ -6,7 +6,8 @@ internal class Program
 {
     static void Main()
     {
-        var installDir = @"[WindowsVolume]Users\user\source\repos\InstallTest\Ian\MyApp";
+        // var installDir = @"[ProgramFiles64Folder]Ian\MyApp\";
+        var installDir = @"[AppDataFolder]Ian\MyApp\";
 
         var bootstrapper =
             new Bundle(
@@ -39,7 +40,7 @@ internal class Program
             "Wix/Bundle",
             new UtilFileSearch
             {
-                Path = $@"{installDir}\MyApp.exe",
+                Path = $@"{installDir}MyApp.exe",
                 Result = SearchResult.exists,
                 Variable = "MyAppInstalled"
             });

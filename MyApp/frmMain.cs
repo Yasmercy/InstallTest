@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -11,9 +12,12 @@ namespace MyApp
             InitializeComponent();
             foreach (var type in FrmAttributeAttribute.GetAllWithAttribute(Assembly.GetExecutingAssembly()))
             {
-                var item = type.GetTypeInfo().GetCustomAttribute<FrmAttributeAttribute>().CreateItem(MenuStrip);
-                item.Click += ToolStripMenuItem_Click;
-                item.Tag = type;
+                if (Global.IniManager.ReadIniFile(type.Name, "Include", "false") != "false")
+                {
+                    var item = type.GetTypeInfo().GetCustomAttribute<FrmAttributeAttribute>().CreateItem(MenuStrip);
+                    item.Click += ToolStripMenuItem_Click;
+                    item.Tag = type;
+                }
             }
         }
 
@@ -38,7 +42,7 @@ namespace MyApp
 
         private bool FindMdiWindows(string fromName, ref Form getform)
         {
-            foreach (Form frm in this.MdiChildren)
+            foreach (Form frm in MdiChildren)
             {
                 if (frm.Name == fromName)
                 {
